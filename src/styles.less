@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+.themeMixin(@rules) {
+    :host-context(.blue) {
+        @import "./theme/blue.less";
+        @rules();
+    }
+
+    :host-context(.black) {
+        @import "./theme/black.less";
+        @rules();
+    }
+
+    :host-context(.green) {
+        @import "./theme/green.less";
+        @rules();
+    }
+}
