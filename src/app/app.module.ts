@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { SomeModule } from './some/some.module';
@@ -11,7 +11,8 @@ import { SomeModule } from './some/some.module';
   imports: [
     BrowserModule,
     NgZorroAntdModule,
-    SomeModule
+    SomeModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

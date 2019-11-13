@@ -10,8 +10,6 @@ import { NzMessageService } from 'ng-zorro-antd';
 export class AppComponent implements OnInit {
   constructor(
     private platform: Platform,
-    private render: Renderer2,
-    private el: ElementRef,
     private message: NzMessageService
   ) {
 
@@ -22,9 +20,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.initColor();
-    setTimeout(() => {
-      console.warn(this.el.nativeElement);
-    }, 8000);
   }
 
   /**
@@ -77,10 +72,7 @@ export class AppComponent implements OnInit {
       const cl = body.classList[0];
       body.classList.remove(cl);
       body.classList.add(res);
-      // this.render.addClass(this.bodyDom, res);
-      // this.render.removeClass(this.bodyDom, 'blue');
-      console.log(`应用成功`);
-      // this.message.create('success', `应用成功`);
+      this.message.create('success', `应用成功`);
       window.scrollTo(0, 0);
     });
   }
